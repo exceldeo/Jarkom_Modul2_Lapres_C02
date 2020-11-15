@@ -37,19 +37,19 @@ Lakukan `ping semeruc12.pw`
 ![1 4](https://user-images.githubusercontent.com/52096462/99185528-fed91680-277c-11eb-84ad-678b4e2afc2f.PNG)
 ![1 6](https://user-images.githubusercontent.com/52096462/99185530-000a4380-277d-11eb-9f77-1383664e2598.PNG)
 
-## Soal 2
+### Soal 2
 
 Buka file `semeruc12.pw` pada uml MALANG, dan masukan konfigurasi
 
-![Img 7](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/2.0.jpg)
+![2 1](https://user-images.githubusercontent.com/52096462/99185574-54adbe80-277d-11eb-87ed-f77bb13d9026.PNG)
+
 
 Lakukan `service bind9 restart` dan cek **ping www.semeruc12.pw** atau **host -t CNAME www.semeruc12.pw** dari uml *GRESIK*
 
-![Img 8](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/2.1.jpg)
-![Img 9](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/2.2.jpg)
+![2 2](https://user-images.githubusercontent.com/52096462/99185576-56778200-277d-11eb-9a43-bfc1ce6debe4.PNG)
 
 
-## Soal 3
+### Soal 3
 
 Edit file **/etc/bind/jarkom/semeruc12.pw** dengan
 ```
@@ -57,14 +57,13 @@ nano /etc/bind/jarkom/semeruc12.pw
 ```
 Serta lakukan konfigurasi pada file tersebut
 
-![Img 10](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/3.0.jpg)
+![3 1](https://user-images.githubusercontent.com/52096462/99185661-e87f8a80-277d-11eb-9ca2-0c67a3aaa4db.PNG)
 
 Setelah itu lakukan `service bind9 restart` dan ping dari *GRESIK* yaitu `ping penanjakan.semeruc12.pw` atau `host -t CNAME penanajakan.semeruc12.pw`
 
-![Img 11](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/3.1.jpg)
-![Img 12](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/3.2.jpg)
+![3 2](https://user-images.githubusercontent.com/52096462/99185662-ea494e00-277d-11eb-9423-4e8307fe06ba.PNG)
 
-## Soal 4
+### Soal 4
 
 Edit file `/etc/bind/named.conf.local` pada *MALANG*
 ```
@@ -79,15 +78,13 @@ zone "77.151.10.in-addr.arpa" {
 };
 ```
 
-![Img 13](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/4.0.jpg)
+![4 1](https://user-images.githubusercontent.com/52096462/99185696-1a90ec80-277e-11eb-8624-8946c5fc6969.PNG)
 
 Copy file **db.local** ke **77.151.10.in-addr.arpa** dan lakukan edit file tersebut.
 
-![Img 14](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/4.1.jpg)
+![4 2](https://user-images.githubusercontent.com/52096462/99185697-1b298300-277e-11eb-9012-1acf482ad52a.PNG)
 
 Setelah itu lakukan `service bind9 restart`
-
-![Img 15](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/4.2.jpg)
 
 Untuk mengecek apakah konfigurasi sudah benar atau belum, lakukan perintah berikut pada client *GRESIK*
 ```
@@ -97,10 +94,10 @@ apt-get update
 apt-get install dnsutils
 
 //Kembalikan nameserver agar tersambung dengan MALANG
-host -t PTR 10.151.77.106
+host -t PTR 10.151.77.28
 ```
 
-![Img 16](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/4.3.jpg)
+![4 3](https://user-images.githubusercontent.com/52096462/99185694-195fbf80-277e-11eb-9b5e-17688f7ec049.PNG)
 
 ## Soal 5
 
