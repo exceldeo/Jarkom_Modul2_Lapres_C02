@@ -99,59 +99,57 @@ host -t PTR 10.151.77.28
 
 ![4 3](https://user-images.githubusercontent.com/52096462/99185694-195fbf80-277e-11eb-9b5e-17688f7ec049.PNG)
 
-## Soal 5
+### Soal 5
 
 * Lakukan konfigurasi pada uml *MALANG* dan lakukan edit file **/etc/bind/named.conf.local**, sehingga menjadi
 
-![Img 17](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/5.0.jpg)
+![5 1](https://user-images.githubusercontent.com/52096462/99185766-9a1ebb80-277e-11eb-866c-66edb70089ec.PNG)
 
 Setelah itu dapat melakukan `service bind9 restart`
 
-![Img 18](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/5.1.jpg)
-
 * Berikutnya pada uml *MOJOKERTO* lakukan update package list `apt-get update` dan install aplikasi bind9 `apt-get install bind9 -y`. Berikutnya tambahkan syntax pada file **/etc/bind/named.conf.local**, gambarannya sebagai berikut
 
-![Img 19](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/5.2.jpg)
+![5 2](https://user-images.githubusercontent.com/52096462/99185768-9b4fe880-277e-11eb-8e0f-7bdac93f9ec2.PNG)
 
 Lakukan restart bind9 `service bind9 restart`
 
 * Pada uml *MALANG*, masukkan command `service bind9 stop` . Pada client *GRESIK* pastikan pengaturan nameserver mengarah ke IP *MALANG* dan IP *MOJOKERTO*
 
-![Img 20](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/5.5.jpg)
+![5 2](https://user-images.githubusercontent.com/52096462/99185768-9b4fe880-277e-11eb-8e0f-7bdac93f9ec2.PNG)
 
 Lakukan ping ke **semeruc12.pw** pada client *GRESIK*
 
-![Img 21](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/5.6.jpg)
+![5 4](https://user-images.githubusercontent.com/52096462/99185771-9d19ac00-277e-11eb-833f-697aca8bb9b5.PNG)
 
-## Soal 6
+### Soal 6
 
 * Pada *MALANG*, edit file **/etc/bind/jarkom/semeruc12.pw**, sehingga menjadi
 
-![Img 22](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.1.jpg)
+![6 1](https://user-images.githubusercontent.com/52096462/99185814-dd792a00-277e-11eb-9901-c09484fe041c.PNG)
 
 Kemudian edit file **/etc/bind/named.conf.options** pada *MALANG*, dan comment **dnssec-validation auto;** dan tambahkan baris berikut pada **/etc/bind/named.conf.options**
 ```
 allow-query{any;};
 ```
 
-![Img 23](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.2.jpg)
+![6 2](https://user-images.githubusercontent.com/52096462/99185817-de11c080-277e-11eb-839a-a7deeffe7222.PNG)
 
 Berikutnya lakukan `service bind9 restart`.
 
 Kemudian edit file **/etc/bind/named.conf.local** menjadi seperti gambar di bawah:
 
-![Img 24](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.3.jpg)
+![6 3](https://user-images.githubusercontent.com/52096462/99185818-deaa5700-277e-11eb-89ff-fb550f79b0b7.PNG)
 
 * Pada *MOJOKERTO* edit file **/etc/bind/named.conf.options**, comment **dnssec-validation auto;** dan tambahkan baris berikut pada **/etc/bind/named.conf.options**
 ```
 allow-query{any;};
 ```
 
-![Img 25](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.5.jpg)
+![6 4](https://user-images.githubusercontent.com/52096462/99185820-dfdb8400-277e-11eb-96d6-b147cc005c22.PNG)
 
 Lalu edit file **/etc/bind/named.conf.local** menjadi seperti gambar di bawah:
 
-![Img 26](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.6.jpg)
+![6 5](https://user-images.githubusercontent.com/52096462/99185822-e0741a80-277e-11eb-8c2b-c827532dbfd3.PNG)
 
 Kemudian buat direktori dengan nama delegasi. Copy **db.local** ke direktori pucang dan edit namanya menjadi **gunung.semeruc12.pw**
 ```
@@ -161,35 +159,34 @@ cp /etc/bind/db.local /etc/bind/delegasi/gunung.semeruc12.pw
 
 Kemudian edit file **gunung.semeruc12.pw**, 
 
-![Img 27](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.8.jpg)
+![6 6](https://user-images.githubusercontent.com/52096462/99185825-e10cb100-277e-11eb-9f7f-b93fdd8476ea.PNG)
 
 dan lakukan `service bind9 restart`. Lakukan ping ke domain gunung.semeruc12.pw dari client *GRESIK*
 
-![Img 28](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/6.7.jpg)
+![6 7](https://user-images.githubusercontent.com/52096462/99185813-dbaf6680-277e-11eb-8b08-ab7bef3c1441.PNG)
 
 
-## Soal 7
+### Soal 7
 
 Edit file **gunung.semeruc12.pw** juga termasuk memasukkan subdomain **naik.gunung**, dan lakukan ping ke domain naik.gunung.semeruc12.pw dari *GRESIK*
 
-![Img 29](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/7.0.jpg)
+![7 1](https://user-images.githubusercontent.com/52096462/99185898-51b3cd80-277f-11eb-84fe-474829232ee4.PNG)
+![7 2](https://user-images.githubusercontent.com/52096462/99185900-537d9100-277f-11eb-870d-f79193615b21.PNG)
 
-## Web Server (Soal 8 - 17)
-
-## Soal 8
+### Soal 8
 
 Pada uml *PROBOLINGGO*, lakukan instalasi `apache2` dan `php`. Pada hal ini, php yang terinstal versi `7.0.33`. 
 
 Pindah ke directory `cd /etc/apache2/sites-available`, dan copy file default **000-default.conf** ke **semeruc12.pw.conf**. lakukan edit file shingga menjadi
 
-![Img 30](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/8.0.jpg)
+![8 1](https://user-images.githubusercontent.com/52096462/99185909-5f695300-277f-11eb-86a1-2a460756b540.PNG)
 
 Aktifkan konfigurasi `a2ensite semeruc12.pw` dan restart apache. Setlahnya dapat membuka **semeruc12.pw** di browser
 
-![Img 31](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/8.1.jpg)
+![8 2](https://user-images.githubusercontent.com/52096462/99185912-61cbad00-277f-11eb-87d6-33e34a4bd27b.PNG)
 
 
-## Soal 9
+### Soal 9
 
 Jalankan perintah `a2enmod rewrite` dan service apache2 dengan `service apache2 restart`. Masih di file yang sama, tambahkan syntax berikut di file **semeruc12.pw.conf**
 ```
@@ -199,11 +196,11 @@ Jalankan perintah `a2enmod rewrite` dan service apache2 dengan `service apache2 
  </Directory>
 ```
 
-![Img 32](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/9.0.jpg)
+![9 1](https://user-images.githubusercontent.com/52096462/99185920-6bedab80-277f-11eb-88e7-aad0a8768595.PNG)
 
 Untuk mula-mula, maka akan tampil di browser dengan alamat **semeruc12.pw.con/index.php/home**
 
-![Img 33](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/9.3.jpg)
+![9 2](https://user-images.githubusercontent.com/52096462/99185925-73ad5000-277f-11eb-9151-dfc887a69aa2.PNG)
 
 Pindah ke directory **/var/www/semeruc12.pw** dan buat file .htaccess dengan isi file
 ```
@@ -213,14 +210,14 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^home$ /index.php/home [L]
 ```
 
-![Img 34](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/9.2.jpg)
+![9 3](https://user-images.githubusercontent.com/52096462/99185930-7a3bc780-277f-11eb-9808-5f3608811b50.PNG)
 
 Lakukan `service apache2 restart` dan kembali buka browser dengan alamat **semeruc12.pw/home**
 
-![Img 35](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/9.1.jpg)
+![9 4](https://user-images.githubusercontent.com/52096462/99186056-3b5a4180-2780-11eb-9048-cdcca33eb1d3.PNG)
 
 
-## Soal 10
+### Soal 10
 
 Pindah ke directory **/etc/apache2/sites-available** kemudian buka file **penanjakan.semeruc12.pw.conf** dan tambahkan syntax
 ```
@@ -231,15 +228,13 @@ Pindah ke directory **/etc/apache2/sites-available** kemudian buka file **penanj
 ```
 hingga menjadi
 
-![Img 36](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/10.3.jpg)
+![10 1](https://user-images.githubusercontent.com/52096462/99186061-3eedc880-2780-11eb-824d-66aed3baa5ed.PNG)
 
 Lakukan `service apache2 restart`, sehingga hasilnya berupa
 
-![Img 37](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/10.0.jpg)
-![Img 38](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/10.1.jpg)
-![Img 39](https://github.com/riclown/Jarkom_modul2_praktikum_C12/blob/main/img/10.2.jpg)
+![10 2](https://user-images.githubusercontent.com/52096462/99186063-3f865f00-2780-11eb-9d0e-2a8a0799fdca.PNG)
 
-## Soal 11
+### Soal 11
 
 Buka file **penanjakan.semeruc12.pw.conf** dengan `cd /etc/apache2/sites-available` dan ketikkan `nano penanjakan.semeruc12.pw.conf` yang dimaksud dengan menambahkan syntax
 ```
