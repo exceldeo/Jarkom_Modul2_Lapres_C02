@@ -93,7 +93,7 @@ Untuk mengecek apakah konfigurasi sudah benar atau belum, lakukan perintah berik
 apt-get update
 apt-get install dnsutils
 
-//Kembalikan nameserver agar tersambung dengan MALANG
+//Kembalikan nameserver agar tersambung dengan PROBOLINGGO
 host -t PTR 10.151.77.28
 ```
 
