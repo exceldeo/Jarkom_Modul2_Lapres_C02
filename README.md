@@ -313,7 +313,7 @@ Lalu aktifkan konfigurasi **naik.gunung.semeruc02.pw** dan lakukan `service apac
 
 ### Soal 15
 
-Buka kembali file **naik.gunung.semeruc02.pw.conf** dengan `cd /etc/apache2/sites-aailable/` dan `nano`, dan masukkan syntax berikut sesuai pada gambar. Syntax juga berasal dari situs lain.
+Buka kembali file **naik.gunung.semeruc02.pw.conf** dengan `cd /etc/apache2/sites-available/` dan `nano`, dan masukkan syntax berikut sesuai pada gambar 
 ```
 <Directory "/var/www/naik.gunung.semeruc02.pw">
       AuthType Basic
@@ -323,25 +323,29 @@ Buka kembali file **naik.gunung.semeruc02.pw.conf** dengan `cd /etc/apache2/site
 </Directory>
 ```
 
+![15 1](https://user-images.githubusercontent.com/52096462/99186247-b1ab7380-2781-11eb-9054-af7853b33d90.PNG)
+
 Konfigurasikan username dan password sesuai soal.
 
 ![15 0](https://user-images.githubusercontent.com/52096462/99186245-b112dd00-2781-11eb-845d-a73ce68ed9e9.PNG)
 
-Lakukan `service apache2 restart`, dan buka broowser dengan memasukkan alamat **naik.gunung.semeruc02.pw:8888**  (:8888 sebagai port).
+Cek username dan password yang sudah dibuat
 
-![15 1](https://user-images.githubusercontent.com/52096462/99186247-b1ab7380-2781-11eb-9054-af7853b33d90.PNG)
 ![15 2](https://user-images.githubusercontent.com/52096462/99186249-b2440a00-2781-11eb-9c18-f018a0c22892.PNG)
 
-Maka akan diminta username dan password, username berupa **semeru** dan password **kuynaikgunung**, setalhnya maka situs dapat dibuka
+Lakukan `service apache2 restart`, dan buka broowser dengan memasukkan alamat **naik.gunung.semeruc02.pw:8888**  (:8888 sebagai port). Maka akan diminta username dan password, username berupa **semeru** dan password **kuynaikgunung**, setelahnya maka situs dapat dibuka
 
 ![15 3](https://user-images.githubusercontent.com/52096462/99186252-b2dca080-2781-11eb-888a-b0b3eefb7481.PNG)
 ![15 4](https://user-images.githubusercontent.com/52096462/99186253-b3753700-2781-11eb-81ed-c5067db27233.PNG)
 
 ### Soal 16
 
-Pindah ke direktori `cd /etc/apache2/sites-available` dan buka file 000-default.conf. Ganti *DocumentRoot* menjadi `/var/www/semeruc02.pw` seperti pada gambar
+Pindah ke direktori `cd /etc/apache2/sites-available` dan buka file 000-default.conf. Ubah beberapa bagian pada file sehinnga menjadi seperti digambar
 
 ![16 1](https://user-images.githubusercontent.com/52096462/99186254-b4a66400-2781-11eb-9f76-466083870e22.PNG)
+
+Lalu edit .htaccess pada **/var/www/semeruc02.pw**
+
 ![16 2](https://user-images.githubusercontent.com/52096462/99186256-b4a66400-2781-11eb-8c42-cb2b6ea06863.PNG)
 
 Lakukan restart apache2 dan masukkan *IP Probolinggo* pada browser
