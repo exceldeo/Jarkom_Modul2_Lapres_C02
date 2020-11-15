@@ -178,13 +178,13 @@ Dan lakukan ping ke domain naik.gunung.semeruc02.pw dari *GRESIK*
 
 ### Soal 8
 
-Pada uml *PROBOLINGGO*, lakukan instalasi `apache2` dan `php`. Pada hal ini, php yang terinstal versi `7.0.33`. 
+Pada uml *PROBOLINGGO*, lakukan instalasi `apache2` dan `php`. Pada hal ini, php yang terinstall versi `7.0.33`. 
 
-Pindah ke directory `cd /etc/apache2/sites-available`, dan copy file default **000-default.conf** ke **semeruc02.pw.conf**. lakukan edit file shingga menjadi
+Pindah ke directory `cd /etc/apache2/sites-available`, dan copy file default **000-default.conf** ke **semeruc02.pw.conf**. lakukan edit file sehingga menjadi
 
 ![8 1](https://user-images.githubusercontent.com/52096462/99185909-5f695300-277f-11eb-86a1-2a460756b540.PNG)
 
-Aktifkan konfigurasi `a2ensite semeruc02.pw` dan restart apache. Setlahnya dapat membuka **semeruc02.pw** di browser
+Aktifkan konfigurasi `a2ensite semeruc02.pw` dan restart apache. Setelahnya dapat membuka **semeruc02.pw** di browser
 
 ![8 2](https://user-images.githubusercontent.com/52096462/99185912-61cbad00-277f-11eb-87d6-33e34a4bd27b.PNG)
 
