@@ -266,7 +266,7 @@ Lakukan `service apache2 restart`, sehingga hasilnya berupa
 
 ### Soal 12
 
-Disediakan file error **404.html** lain untuk menggantkan file **404.html** sebelumnya. Buka file **penanjakan.semeruc02.pw.conf** dan tambahkan syntax, syntax diambil dari situs lain.
+Disediakan file error **404.html** lain untuk menggantkan file **404.html** bawaan apache. Buka file **penanjakan.semeruc12.pw.conf** dan tambahkan syntax **ErrorDocument 404 /errors/404.html** 
 ```
 ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
@@ -282,11 +282,11 @@ ErrorDocument 404 /errors/404.html
 
 ![12 1](https://user-images.githubusercontent.com/52096462/99186098-7eb4b000-2780-11eb-841e-16592f69d71c.PNG)
 
-Setlah itu, dapat membuka browser untuk melihat perubahan yang ada dengan mengetikkan **penanjakan.semeruc02.pw/errors/404.html**
+Setlah itu, dapat membuka browser untuk melihat perubahan yang ada dengan mengetikkan **penanjakan.semeruc02.pw/publico**
 
 ![12 2](https://user-images.githubusercontent.com/52096462/99186099-7f4d4680-2780-11eb-8f80-ec38449ff2a5.PNG)
 
-Hal ini juga dapat diterapkan pada alamat lain yang menuju ke halaman 404.
+Hal ini dapat dibuktikan dengan mengecek halaman error yang ada pada **penanjakan.semeruc02.pw/public/errors/404.html**
 
 ![12 3](https://user-images.githubusercontent.com/52096462/99186100-7fe5dd00-2780-11eb-93dc-623776f1bdc7.PNG)
 
@@ -296,19 +296,9 @@ Buka file **penanjakan.semeruc02.pw.conf** dan tambahkan syntax `Alias "/js" "/v
 
 ![13 1](https://user-images.githubusercontent.com/52096462/99186101-7fe5dd00-2780-11eb-9c2a-448bf24b5d00.PNG)
 
-Setelahnya dapat membuka alamat **penanjakan.semeruc02.pw/public/javascripts/** pada browser
+Setelahnya dapat membuka alamat **penanjakan.semeruc02.pw/js/** pada browser
 
-* Gambar berikut merupakan gambar ketika `folder javascripts` masih dapat dibuka
-
-![13 2](https://user-images.githubusercontent.com/52096462/99186102-807e7380-2780-11eb-9eda-36188202b199.PNG)
-
-* Sedangkan gambar berikut merupakan hasil dari no. 11 di mana `directory listing` tidak diperbolehkan
-
-Lalu dapat membuka alamat **penanjakan.semeruc02.pw/js/** pada browser
-
-* Gambar berikut merupakan gambar ketika `folder javascripts` dengan konfigurasi virtual host `/js/` masih dapat dibuka
-
-* Sedangkan gambar berikut merupakan gambar ketika `folder javascripts` dengan konfigurasi virtual host `/js/` dengan hasil dari no. 11 di mana `directory listing` tidak diperbolehkan.
+* Seperti yang dilihat hasilnya akan forbidden karena hasil dari no. 11 di mana `directory listing` tidak diperbolehkan
 
 ### Soal 14
 
