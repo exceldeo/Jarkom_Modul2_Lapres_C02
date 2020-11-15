@@ -115,7 +115,7 @@ Lakukan restart bind9 `service bind9 restart`
 
 * Pada uml *MALANG*, masukkan command `service bind9 stop` . Pada client *GRESIK* pastikan pengaturan nameserver mengarah ke IP *MALANG* dan IP *MOJOKERTO*
 
-![5 2](https://user-images.githubusercontent.com/52096462/99185768-9b4fe880-277e-11eb-8e0f-7bdac93f9ec2.PNG)
+![5 3](https://user-images.githubusercontent.com/52096462/99186856-b5d99000-2785-11eb-8756-7b173d7a5277.PNG)
 
 Lakukan ping ke **semeruc02.pw** pada client *GRESIK*
 
