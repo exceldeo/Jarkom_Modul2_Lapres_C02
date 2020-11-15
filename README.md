@@ -301,15 +301,15 @@ Pindah ke *directory* `/etc/apache2/sites-available` menggunakan perintah
 cd /etc/apache2/sites-available
 ```
 
-Buka file **naik.gunung.semeruc02.pw.conf** dan ubah port yang awalnya `80` menjadi `8888`, serta ubah *DocumentRoot* yang awalnya `/var/www/html` menjadi `/var/www/naik.gunung.semeruc02.pw`, seperti gambar berikut
+Buka file **naik.gunung.semeruc02.pw.conf** dan ubah port yang awalnya `80` menjadi `8888`, serta ubah isinya sesuai gambar dibawah ini
 
 ![14 1](https://user-images.githubusercontent.com/52096462/99186243-af491980-2781-11eb-8c8b-db8cc1eb6b15.PNG)
 
 Tambahkan port 8888 pada file **ports.conf**. File ports.conf berada pada directory `/etc/apache2`. Cara menambahkannya sebagai berikut pada gambar
 
-![14 2](https://user-images.githubusercontent.com/52096462/99186244-b07a4680-2781-11eb-82b1-b8fe8fa9251f.PNG)
-
 Lalu aktifkan konfigurasi **naik.gunung.semeruc02.pw** dan lakukan `service apache2 restart`. dan buka browser dengan alamat **naik.gunung.semeruc02.pw**
+
+![14 2](https://user-images.githubusercontent.com/52096462/99186244-b07a4680-2781-11eb-82b1-b8fe8fa9251f.PNG)
 
 ### Soal 15
 
