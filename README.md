@@ -269,7 +269,7 @@ Lakukan `service apache2 restart`, sehingga hasilnya berupa
 
 ### Soal 12
 
-Disediakan file error **404.html** lain untuk menggantkan file **404.html** bawaan apache. Buka file **penanjakan.semeruc12.pw.conf** dan tambahkan syntax ini dibawah ErrorLog
+Disediakan file error **404.html** lain untuk menggantkan file **404.html** bawaan apache. Buka file **penanjakan.semeruc02.pw.conf** dan tambahkan syntax ini dibawah ErrorLog
 ```
 ErrorDocument 404 /errors/404.html
 ```
