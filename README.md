@@ -340,11 +340,16 @@ Lakukan `service apache2 restart`, dan buka broowser dengan memasukkan alamat **
 
 ### Soal 16
 
-Pindah ke direktori `cd /etc/apache2/sites-available` dan buka file 000-default.conf. Ubah beberapa bagian pada file sehinnga menjadi seperti digambar
+Pindah ke directory `cd /etc/apache2/sites-available` dan buka file 000-default.conf. Ubah beberapa bagian pada file sehinnga menjadi seperti digambar
 
 ![16 1](https://user-images.githubusercontent.com/52096462/99186254-b4a66400-2781-11eb-9f76-466083870e22.PNG)
 
-Lalu edit .htaccess pada **/var/www/semeruc02.pw**
+Pindah ke directory **/var/www/semeruc12.pw** dan tambahkan line berikut pada .htaccess sebelumnya
+```
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^10\.151\.77.28$ (IP PROBOLINGGO)
+RewriteRule ^(.*)$ http://semeruc02.pw/$1 [L,R=301]
+```
 
 ![16 2](https://user-images.githubusercontent.com/52096462/99186256-b4a66400-2781-11eb-8c42-cb2b6ea06863.PNG)
 
