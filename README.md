@@ -363,7 +363,7 @@ Lakukan restart apache2 dan masukkan *IP Probolinggo* pada browser yang akan dir
 
 ### Soal 17
 
-Pada virtual host semerud13.pw buat dapat membaca .htaccess
+Pada virtual host semeruc02.pw buat dapat membaca .htaccess
 
 ![17 1](https://user-images.githubusercontent.com/52096462/99186450-f71c7080-2782-11eb-9bae-072993614f2e.PNG)
 
