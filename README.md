@@ -307,6 +307,8 @@ Buka file **naik.gunung.semeruc02.pw.conf** dan ubah port yang awalnya `80` menj
 
 Tambahkan port 8888 pada file **ports.conf**. File ports.conf berada pada directory `/etc/apache2`. Cara menambahkannya sebagai berikut pada gambar
 
+![missing](https://user-images.githubusercontent.com/52096462/99187584-09e67380-278a-11eb-9b70-6132bfecdfd7.png)
+
 Lalu aktifkan konfigurasi **naik.gunung.semeruc02.pw** dan lakukan `service apache2 restart`. dan buka browser dengan alamat **naik.gunung.semeruc02.pw**
 
 ![14 2](https://user-images.githubusercontent.com/52096462/99186244-b07a4680-2781-11eb-82b1-b8fe8fa9251f.PNG)
@@ -360,7 +362,18 @@ Lakukan restart apache2 dan masukkan *IP Probolinggo* pada browser yang akan dir
 
 
 ### Soal 17
+
+Pada virtual host semerud13.pw buat dapat membaca .htaccess
+
 ![17 1](https://user-images.githubusercontent.com/52096462/99186450-f71c7080-2782-11eb-9bae-072993614f2e.PNG)
+
+buat file .htaccess di document root yang berisi:
+```
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !/public/images/semeru.jpg
+RewriteRule ^(.*)(public/images/(.*)(semeru)(.*))(.*)$ /public/images/semeru.jpg [R=301]
+```
+
 ![17 2](https://user-images.githubusercontent.com/52096462/99186451-f84d9d80-2782-11eb-817d-b661ee65e6a8.PNG)
 ![17 3](https://user-images.githubusercontent.com/52096462/99186452-f8e63400-2782-11eb-8454-dc32ce50931f.PNG)
 ![17 4](https://user-images.githubusercontent.com/52096462/99186453-faaff780-2782-11eb-8b14-a319a63ba3ad.PNG)
