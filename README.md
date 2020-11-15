@@ -269,18 +269,9 @@ Lakukan `service apache2 restart`, sehingga hasilnya berupa
 
 ### Soal 12
 
-Disediakan file error **404.html** lain untuk menggantkan file **404.html** bawaan apache. Buka file **penanjakan.semeruc12.pw.conf** dan tambahkan syntax **ErrorDocument 404 /errors/404.html** 
+Disediakan file error **404.html** lain untuk menggantkan file **404.html** bawaan apache. Buka file **penanjakan.semeruc12.pw.conf** dan tambahkan syntax ini dibawah ErrorLog
 ```
-ErrorLog ${APACHE_LOG_DIR}/error.log
-CustomLog ${APACHE_LOG_DIR}/access.log combined
-
 ErrorDocument 404 /errors/404.html
-
-<Files "errors/404.html">
-     <If "-z %{ENV:REDIRECT_STATUS}">
-            RedirectMatch 404 ^/errors/404.html$
-     </If>
-</Files>
 ```
 
 ![12 1](https://user-images.githubusercontent.com/52096462/99186098-7eb4b000-2780-11eb-841e-16592f69d71c.PNG)
