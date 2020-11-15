@@ -362,12 +362,11 @@ Lakukan restart apache2 dan masukkan *IP Probolinggo* pada browser yang akan dir
 
 
 ### Soal 17
-
-Pada virtual host semeruc02.pw buat dapat membaca .htaccess
+Pindah ke directory `cd /etc/apache2/sites-available` dan buka penanjakan.semeruc02.pw.conf. Ubah beberapa bagian pada file sehinnga menjadi seperti digambar
 
 ![17 1](https://user-images.githubusercontent.com/52096462/99186450-f71c7080-2782-11eb-9bae-072993614f2e.PNG)
 
-buat file .htaccess di document root yang berisi:
+Pindah ke directory **/var/www/penanjakan.semeruc12.pw** dan buat file .htaccess yang berisi:
 ```
 RewriteEngine On
 RewriteCond %{REQUEST_URI} !/public/images/semeru.jpg
@@ -375,7 +374,19 @@ RewriteRule ^(.*)(public/images/(.*)(semeru)(.*))(.*)$ /public/images/semeru.jpg
 ```
 
 ![17 2](https://user-images.githubusercontent.com/52096462/99186451-f84d9d80-2782-11eb-817d-b661ee65e6a8.PNG)
+
+Lakukan `service apache2 restart` dan kembali buka browser dengan alamat **penanjakan.semeruc12.pw/public/images/semeruooo.jpg** atau substring lain yang menyimpan semeru pada format file jpg
+
 ![17 3](https://user-images.githubusercontent.com/52096462/99186452-f8e63400-2782-11eb-8454-dc32ce50931f.PNG)
+
+Akan langsung diredirect menuju **penanjakan.semeruc12.pw/public/images/semeru.jpg**
+
 ![17 4](https://user-images.githubusercontent.com/52096462/99186453-faaff780-2782-11eb-8b14-a319a63ba3ad.PNG)
+
+Contoh lainnya untuk yang bukan substring semeru seperti **penanjakan.semeruc12.pw/public/images/seme0ru.jpg**
+
 ![17 5kloseme0ru](https://user-images.githubusercontent.com/52096462/99186455-fbe12480-2782-11eb-8da4-8795bf2670f0.PNG)
+
+Diredirect menuju halaman error karena tidak ditemukan dan tidak masuk ke aturan rewrite yang diatur pada nomor ini
+
 ![17 6Hasil](https://user-images.githubusercontent.com/52096462/99186456-fd125180-2782-11eb-800c-65dec69e626c.PNG)
