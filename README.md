@@ -348,7 +348,7 @@ Lalu edit .htaccess pada **/var/www/semeruc02.pw**
 
 ![16 2](https://user-images.githubusercontent.com/52096462/99186256-b4a66400-2781-11eb-8c42-cb2b6ea06863.PNG)
 
-Lakukan restart apache2 dan masukkan *IP Probolinggo* pada browser
+Lakukan restart apache2 dan masukkan *IP Probolinggo* pada browser yang akan diredirect secara langsung ke **semeruc02.pw**
 
 ![16 3](https://user-images.githubusercontent.com/52096462/99186405-a3118c00-2782-11eb-8654-382e6e35b3df.PNG)
 ![16 4](https://user-images.githubusercontent.com/52096462/99186410-a4db4f80-2782-11eb-9410-e37aea86ac84.PNG)
