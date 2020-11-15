@@ -390,3 +390,7 @@ Contoh lainnya untuk yang bukan substring semeru seperti **penanjakan.semeruc12.
 Diredirect menuju halaman error karena tidak ditemukan dan tidak masuk ke aturan rewrite yang diatur pada nomor ini
 
 ![17 6Hasil](https://user-images.githubusercontent.com/52096462/99186456-fd125180-2782-11eb-800c-65dec69e626c.PNG)
+
+## Kendala
+1. Limit memory yang di gunakan terlalu ketat sehingga membuat segmentation fault
+2. Penggunaan VPN sering bermasalah dan lamban
