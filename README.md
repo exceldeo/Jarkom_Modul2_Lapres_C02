@@ -222,7 +222,7 @@ Lakukan `service apache2 restart` dan kembali buka browser dengan alamat **semer
 
 ### Soal 10
 
-Pindah ke directory **/etc/apache2/sites-available** kemudian buka file **penanjakan.semeruc02.pw.conf** dan tambahkan syntax
+Pindah ke directory **/etc/apache2/sites-available** kemudian buka file **penanjakan.semeruc02.pw.conf** ubah menjadi seperti gambar dan sertakan syntax
 ```
  <Directory /var/www/penanjakan.semeruc02.pw>
      Options +FollowSymLinks -Multiviews
