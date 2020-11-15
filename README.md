@@ -151,7 +151,7 @@ Lalu edit file **/etc/bind/named.conf.local** menjadi seperti gambar di bawah:
 
 ![6 5](https://user-images.githubusercontent.com/52096462/99185822-e0741a80-277e-11eb-8c2b-c827532dbfd3.PNG)
 
-Kemudian buat direktori dengan nama delegasi. Copy **db.local** ke direktori pucang dan edit namanya menjadi **gunung.semeruc02.pw**
+Kemudian buat direktori dengan nama delegasi. Copy **db.local** ke direktori delegasi dan edit namanya menjadi **gunung.semeruc02.pw**
 ```
 mkdir /etc/bind/delegasi
 cp /etc/bind/db.local /etc/bind/delegasi/gunung.semeruc02.pw
