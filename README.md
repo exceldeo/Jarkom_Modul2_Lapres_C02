@@ -168,9 +168,12 @@ dan lakukan `service bind9 restart`. Lakukan ping ke domain gunung.semeruc02.pw 
 
 ### Soal 7
 
-Edit file **gunung.semeruc02.pw** juga termasuk memasukkan subdomain **naik.gunung**, dan lakukan ping ke domain naik.gunung.semeruc02.pw dari *GRESIK*
+Edit file **gunung.semeruc02.pw** juga termasuk memasukkan subdomain **naik.gunung**
 
 ![7 1](https://user-images.githubusercontent.com/52096462/99185898-51b3cd80-277f-11eb-84fe-474829232ee4.PNG)
+
+Dan lakukan ping ke domain naik.gunung.semeruc02.pw dari *GRESIK*
+
 ![7 2](https://user-images.githubusercontent.com/52096462/99185900-537d9100-277f-11eb-870d-f79193615b21.PNG)
 
 ### Soal 8
